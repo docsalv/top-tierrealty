@@ -847,11 +847,11 @@ Banner Style
 }
 
 .main-banner .item-1 {
-  background-image: url(../images/Greenhaven.jpg);
+  background-image: url(../images/greenhaven1.jpg);
 }
 
 .main-banner .item-2 {
-  background-image: url(../images/enclave.jpg);
+  background-image: url(../images/enclave1.jpg);
 }
 
 .main-banner .item-3 {
@@ -867,6 +867,7 @@ Banner Style
   padding: 6px 15px;
   display: inline-block;
   margin-bottom: 30px;
+  object-fit: contain;
 }
 
 .main-banner .item span.category em {
