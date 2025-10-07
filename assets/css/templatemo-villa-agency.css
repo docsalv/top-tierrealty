@@ -1148,7 +1148,7 @@ Video Style
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 60px 20px;
+  padding: 30px 10px;
   background-color: #fff;
   flex-wrap: wrap;
   text-align: center;
@@ -1156,9 +1156,9 @@ Video Style
 
 .stat-box {
   flex: 1 1 200px;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 7px;
   background: #f9f9f9;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -1169,20 +1169,20 @@ Video Style
 }
 
 .stat-icon {
-  font-size: 40px;
+  font-size: 20px;
   color: #10344D;;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #333;
 }
 
 .stat-label {
   margin-top: 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
 }
  /* Happy cleints and others ends */
@@ -2149,7 +2149,7 @@ body {
 }
 .our-story {
   margin-top: -50px;      /* or reduce to something like 20px */
-  margin-bottom: -90px;   /* or reduce */
+  margin-bottom: -40px;   /* or reduce */
   padding-top: 2px;  /* adjust to desired spacing */
   padding-bottom: 50px;
 }
@@ -2179,13 +2179,13 @@ body {
 }
 
 .story-text h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #10344D;
   margin-bottom: 20px;
 }
 
 .story-text p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
   line-height: 1.6;
   max-width: 600px;
@@ -2198,12 +2198,12 @@ body {
   }
 
   .story-text-side {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
   }
 
   .story-text h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .story-text p {
@@ -2216,13 +2216,13 @@ body {
 /* --- Mission, Vision, Core Values Section --- */
 .mvc-section {
   background-color: #fdfdfd;
-  padding: 60px 20px;
+  padding: 30px 10px;
 }
 
 .mvc-container {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -2240,20 +2240,20 @@ body {
 }
 
 .mvc-block h3 {
-  font-size: 1.8rem;
+  font-size: 14px;
   color: #10344D;
   margin-bottom: 15px;
 }
 
 .mvc-block ul {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 10px;
   color: #333;
 }
 
 .mvc-block li {
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 /* --- Fade-In Keyframe Animation --- */
