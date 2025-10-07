@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Top-tier Realty - Abiding Grace Estate</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #10344D;
+    }
+
+    /* -----------------------------
+       PRELOADER
+    ------------------------------ */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #10344D;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+
+    #preloader img {
+      width: 120px;
+      height: auto;
+      animation: fadeInOut 1.8s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* -----------------------------
+       SUB-HEADER
+    ------------------------------ */
+    .sub-header {
+      background: #10344D;
+      color: white;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .sub-header .info,
+    .sub-header .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .sub-header .info li {
+      margin-right: 20px;
+    }
+
+    .sub-header .info i {
+      color: #C8AA62;
+      margin-right: 8px;
+    }
+
+    .social-links li {
+      margin-left: 10px;
+    }
+
+    .social-links a {
+      color: white;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #C8AA62;
+    }
+
+    /* -----------------------------
+       HEADER AREA
+    ------------------------------ */
+    .header-area {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .main-nav .nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav .nav li {
+      margin: 0 15px;
+    }
+
+    .main-nav .nav a {
+      text-decoration: none;
+      color: #10344D;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .main-nav .nav a.active,
+    .main-nav .nav a:hover {
+      color: #C8AA62;
+    }
+
+    .menu-trigger {
+      display: none;
+      cursor: pointer;
+      background: #10344D;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* MOBILE MENU */
+    @media (max-width: 992px) {
+      .main-nav .nav {
+        display: none;
+        flex-direction: column;
+        background: #10344D;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+      }
+
+      .main-nav .nav.active {
+        display: flex;
+      }
+
+      .main-nav .nav li {
+        margin: 15px 0;
+        text-align: center;
+      }
+
+      .main-nav .nav a {
+        color: white;
+        font-size: 16px;
+      }
+
+      .menu-trigger {
+        display: block;
+      }
+    }
+
+    /* -----------------------------
+       HERO / ESTATE HEADER
+    ------------------------------ */
+    .estate-header {
+      position: relative;
+      background: url("assets/images/estate-bg.jpg") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .estate-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(16, 52, 77, 0.8);
+      z-index: 0;
+    }
+
+    .estate-header h2,
+    .estate-header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .estate-header h2 {
+      color: #C8AA62;
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .estate-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #eee;
+    }
+
+    /* -----------------------------
+       PROPERTY SECTION
+    ------------------------------ */
+    .prototype-section {
+      padding: 60px 0;
+      background: white;
+    }
+
+    .property-card {
+      background: #10344D;
+      color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .property-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .property-info {
+      padding: 20px;
+    }
+
+    .property-info h4 {
+      color: #C8AA62;
+      margin-bottom: 10px;
+    }
+
+    .btn-secure {
+      display: inline-block;
+      background: #C8AA62;
+      color: #10344D;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-secure:hover {
+      background: #10344D;
+      color: #C8AA62;
+      border: 2px solid #C8AA62;
+    }
+
+    /* -----------------------------
+       AMENITIES SECTION
+    ------------------------------ */
+    .amenities-section {
+      background: #10344D;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .amenities-section h3 {
+      text-align: center;
+      color: #C8AA62;
+      margin-bottom: 40px;
+    }
+
+    .amenity-box {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .amenity-box:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .amenity-box i {
+      color: #C8AA62;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    /* -----------------------------
+       FOOTER
+    ------------------------------ */
+    footer {
+      background: #0d2a3c;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #C8AA62;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <img src="assets/images/toptierlogo.png" alt="Loading..." />
+    <p style="color:#C8AA62; margin-top:10px;">Loading Estate...</p>
+  </div>
+
+  
+
+  <!-- HEADER -->
+  <header class="header-area">
+    <div class="container">
+      <nav class="main-nav">
+        <a href="index.html" class="logo">
+          <img src="assets/images/toptierlogo.png" alt="Toptier Logo" style="height: 120px;">
+        </a>
+
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html" class="active">Properties</a></li>
+          <li><a href="third-party.html">Third Party Properties</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#"><i class="fa fa-car" style="color:#C8AA62;"></i> Book Site Visit</a></li>
+        </ul>
+
+        <a class="menu-trigger"><span>Menu</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="estate-header">
+    <h2>hutu Polo Golf</h2>
+    <p>before cetenary city, </p>
+  </section>
+
+  <!-- PROPERTIES -->
+  <section class="prototype-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/deal-01.jpg" alt="">
+            <div class="property-info">
+              <h6>150 SQM</h6>
+              <h4>3 bedroom terrace</h4>
+              <p>Modern comfort with smart design and serene ambience.</p>
+              <a href="#" class="btn-secure">Secure Your Place</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/deal-02.jpg" alt="">
+            <div class="property-info">
+              <h4>Luxury Villa</h4>
+              <p>Experience private gardens, wide spaces, and elegant finishing.</p>
+              <a href="#" class="btn-secure">Secure Your Place</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/deal-03.jpg" alt="">
+            <div class="property-info">
+              <h4>Executive Penthouse</h4>
+              <p>Panoramic views, exclusive comfort, and top-tier design.</p>
+              <a href="#" class="btn-secure">Secure Your Place</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section class="amenities-section">
+    <div class="container">
+      <h3>Estate Amenities</h3>
+      <div class="row g-4 text-center">
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-bolt"></i><h5>Electricity</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-water"></i><h5>Water Supply</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-shield-halved"></i><h5>Security</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-tree"></i><h5>Green Area</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-car"></i><h5>Parking</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-wifi"></i><h5>Internet</h5></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Abiding Grace Realty. All Rights Reserved. | Designed with ❤️ in Abuja.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Preloader fade-out
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.style.opacity = "0";
+      setTimeout(() => (preloader.style.display = "none"), 600);
+    });
+
+    // Menu toggle
+    const menuTrigger = document.querySelector(".menu-trigger");
+    const nav = document.querySelector(".main-nav .nav");
+    menuTrigger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
