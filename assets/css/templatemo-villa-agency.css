@@ -489,8 +489,8 @@ Header Style
 
 .header-area {
   position: relative;
-  background-color: #fff;
-  height: 100px;
+  background-color: #dedcda;
+  height: 80px;
   z-index: 100;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
@@ -1553,36 +1553,6 @@ Contact Style
 ---------------------------------------------
 Footer Style
 --------------------------------------------- 
-*/
-
-footer.footer-no-gap {
-  margin-top: 0px;
-}
-
-footer {
-  margin-top: 150px;
-  background-color: #10344D;;
-  min-height: 100px;
-}
-
-footer p {
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-footer p a {
-  color: #fff;
-  transition: all .3s;
-  position: relative;
-  z-index: 3;
-}
-
-footer p a:hover {
-  opacity: 0.75;
-}
 
 
 /* 
@@ -2148,12 +2118,6 @@ body {
  
 
 }
-.our-story {
-  margin-top: -50px;      /* or reduce to something like 20px */
-  margin-bottom: -40px;   /* or reduce */
-  padding-top: 2px;  /* adjust to desired spacing */
-  padding-bottom: 50px;
-}
 
 
 /* Image side */
@@ -2174,7 +2138,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 20px;
   background-color: #fdfdfd;
   min-width: 300px;
 }
@@ -2230,14 +2194,15 @@ body {
 }
 
 .mvc-block {
-  flex: 1 1 300px;
+  flex: 1 1 10px;
   background-color: #ffffff;
   border: 2px solid #10344D;
   border-left: 8px solid #C8AA62;
-  padding: 30px;
+  padding: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   transition: transform 0.3s ease;
+  margin-bottom: 0;
 }
 
 .mvc-block h3 {
@@ -2253,8 +2218,8 @@ body {
 }
 
 .mvc-block li {
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 5px;
+  font-size: 12px;
 }
 
 /* --- Fade-In Keyframe Animation --- */
