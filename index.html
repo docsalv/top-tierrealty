@@ -1,192 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Top-Tier Realty - Highland City Estate Kabusa</title>
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Top-Tier Realty - Real Estate Company</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/toptier.jpg">
-<link rel="apple-touch-icon" href="assets/images/toptier.jpg">
-<link rel="shortcut icon" href="assets/images/toptier.jpg">
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
-    <!-- Owl Carousel CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<!-- Include Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- jQuery (required by Owl Carousel) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-<!--
-
-Toptier Realty
-
-
--->
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    .nav-tabs .nav-link {
-  color: #001f3f;
-  border: none;
-  font-weight: 600;
-}
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #10344D;
+    }
 
-.nav-tabs .nav-link.active {
-  background-color: #001f3f;
-  color: #fff;
-  border-radius: 8px;
-}
-
-.info-table {
-  background-color: #001f3f;
-  color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.info-table ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.info-table ul li {
+ /* ===== IMAGE PRELOADER ===== */
+.image-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* White background */
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-  padding: 8px 0;
-  font-weight: 500;
-  color: #fff;
-}
-h2 {
-  color: rgb(254, 252, 247);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
-.info-table ul li span {
-  color: #f9f8f5;
-  font-weight: 600;
+.image-preloader .preloader-content {
+  text-align: center;
 }
 
-.btn-info {
-  display: inline-block;
-  margin: 6px 0;
-  padding: 8px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+.image-preloader .preloader-logo {
+  width: 150px;
+  height: auto;
+  animation: fadePulse 2s infinite ease-in-out;
 }
 
-.btn-info.gold {
-  background-color: #cfa93f;
-  color: #001f3f;
+/* Simple pulse animation for logo */
+@keyframes fadePulse {
+  0% { opacity: 0.6; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.6; transform: scale(0.95); }
 }
 
-.btn-info.gold:hover {
-  background-color: #b48c29;
-  color: #fff;
-}
-
-.btn-info.navy {
-  background-color: #001f3f;
-  color: #fff;
-}
-
-.btn-info.navy:hover {
-  background-color: #012a5c;
-}
-
-.visit-btn {
-  display: inline-block;
-  background-color: #001f3f;
-  color: #cfa93f;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.visit-btn i {
-  margin-right: 8px;
-  color: #cfa93f;
-}
-
-.visit-btn:hover {
-  background-color: #012a5c;
-  color: #fff;
-}
-
-.flow-btn {
-  display: inline-block;
-  position: relative;
-  padding: 5px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  overflow: hidden;
-  background: linear-gradient(270deg, #10344d #0088cc, #0055a4);
-  background-size: 400% 400%;
-  animation: waterFlow 6s ease infinite;
-  border: none;
-  box-shadow: 0 0 12px rgba(239, 244, 103, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.flow-btn i {
-  margin-right: 8px;
-  color: #C8AA62;
-}
-
-.flow-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 18px rgba(0, 36, 54, 0.7);
-}
-
-/* Water flowing effect */
-@keyframes waterFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Hide preloader smoothly when done */
+.image-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
 
 
+    /* -----------------------------
+       SUB-HEADER
+    ------------------------------ */
+    .sub-header {
+      background: #10344D;
+      color: white;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .sub-header .info,
+    .sub-header .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .sub-header .info li {
+      margin-right: 20px;
+    }
+
+    .sub-header .info i {
+      color: #C8AA62;
+      margin-right: 8px;
+    }
+
+    .social-links li {
+      margin-left: 10px;
+    }
+
+    .social-links a {
+      color: white;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #C8AA62;
+    }
+
+    /* -----------------------------
+       HEADER AREA
+    ------------------------------ */
+    .header-area {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .main-nav .nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav .nav li {
+      margin: 0 15px;
+    }
+
+    .main-nav .nav a {
+      text-decoration: none;
+      color: #10344D;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .main-nav .nav a.active,
+    .main-nav .nav a:hover {
+      color: #C8AA62;
+    }
+
+    .menu-trigger {
+      display: none;
+      cursor: pointer;
+      background: #10344D;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* MOBILE MENU */
+    @media (max-width: 992px) {
+      .main-nav .nav {
+        display: none;
+        flex-direction: column;
+        background: #10344D;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+      }
+
+      .main-nav .nav.active {
+        display: flex;
+      }
+
+      .main-nav .nav li {
+        margin: 15px 0;
+        text-align: center;
+      }
+
+      .main-nav .nav a {
+        color: white;
+        font-size: 16px;
+      }
+
+      .menu-trigger {
+        display: block;
+      }
+    }
+
+    /* -----------------------------
+       HERO / ESTATE HEADER
+    ------------------------------ */
+    .estate-header {
+      position: relative;
+      background: url("assets/images/estate-bg.jpg") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .estate-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(16, 52, 77, 0.8);
+      z-index: 0;
+    }
+
+    .estate-header h2,
+    .estate-header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .estate-header h2 {
+      color: #C8AA62;
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .estate-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #eee;
+    }
+
+    /* -----------------------------
+       PROPERTY SECTION
+    ------------------------------ */
+    .prototype-section {
+      padding: 60px 0;
+      background: white;
+    }
+
+    .property-card {
+      background: #10344D;
+      color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .property-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .property-info {
+      padding: 20px;
+    }
+
+    .property-info h4 {
+      color: #C8AA62;
+      margin-bottom: 10px;
+    }
+
+    .btn-secure {
+      display: inline-block;
+      background: #C8AA62;
+      color: #10344D;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-secure:hover {
+      background: #10344D;
+      color: #C8AA62;
+      border: 2px solid #C8AA62;
+    }
+
+    /* -----------------------------
+       AMENITIES SECTION
+    ------------------------------ */
+    .amenities-section {
+      background: #10344D;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .amenities-section h3 {
+      text-align: center;
+      color: #C8AA62;
+      margin-bottom: 40px;
+    }
+
+    .amenity-box {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .amenity-box:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .amenity-box i {
+      color: #C8AA62;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    /* -----------------------------
+       FOOTER
+    ------------------------------ */
+    footer {
+      background: #0d2a3c;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #C8AA62;
+    }
   </style>
+</head>
 
 <body>
-
- <!-- ***** Image Preloader Start ***** -->
+  <!-- ***** Image Preloader Start ***** -->
 <div id="js-preloader" class="image-preloader">
   <div class="preloader-content">
     <img src="assets/images/toptierpreloder.png" alt="Loading..." class="preloader-logo">
@@ -202,803 +336,217 @@ h2 {
 </script>
 
 <!-- ***** Image Preloader End ***** -->
+  
 
-
-<!-- Include Font Awesome in your <head> -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-
-<div class="sub-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-8">
-        <ul class="info">
-          <li>
-            <i class="fa fa-envelope"></i>
-            officialtoptierrealty@gmail.com
-          </li>
-          <li>
-            <i class="fa fa-map-marker-alt"></i>
-            Abiding Grace Plaza, Apo; Gudu. Abuja
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-lg-4 col-md-4">
-        <ul class="social-links">
-        <li>
-    <a href="https://www.facebook.com/profile.php?id=61576613353029&mibextid=ZbWKwL" target="_blank" title="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://x.com/top_tierrealty?t=NcOIc6vsba6OuGsv1dlH_w&s=09" target="_blank" title="X (Twitter)">
-      <i class="fab fa-x-twitter"></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.tiktok.com/@officialtoptierrealty?_t=ZS-90Otipaq9k8&_r=1" target="_blank" title="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.instagram.com/officialtoptierrealty?igsh=c2o1aTJvZGpiMDE4" target="_blank" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-  <!-- ***** Header Area Start ***** -->
- <header class="header-area header-sticky">
+  <!-- HEADER -->
+  <header class="header-area">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/ttrlogo.png" alt="Toptier Logo" style="height: 140px; width: 140px; margin-top: -30px;">
-                    </a>
-                 
+      <nav class="main-nav">
+        <a href="index.html" class="logo">
+          <img src="assets/images/toptierlogo.png" alt="Toptier Logo" style="height: 120px;">
+        </a>
 
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="properties.html" class="active">Properties</a></li>
-                        <li><a href="third-party.html">Our Third Party Properties</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                           <li>
-                            <a href="https://wa.me/2349160008309?text=Hello%20Top-Tier%20Team" target="_blank">
-  <i class="fa fa-car"  style="color: #C8AA62;"></i> Book a free site visit
-</a>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html" class="active">Properties</a></li>
+          <li><a href="third-party.html">Third Party Properties</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#"><i class="fa fa-car" style="color:#C8AA62;"></i> Book Site Visit</a></li>
+        </ul>
 
-                        </li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
+        <a class="menu-trigger"><span>Menu</span></a>
+      </nav>
     </div>
-</header>
-  <!-- ***** Header Area End ***** -->
+  </header>
 
- <!-- ***** video bg***** -->
- <div class="main-banner video-banner">
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="assets/videos/ttrvid.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <!-- HERO SECTION -->
+  <section class="estate-header">
+    <h2>HIGHLAND CITY ESTATE</h2>
+    <p>SHERETTI KABUSA, ABUJA</p>
+  </section>
+  <section class="nearby-section" style="padding: 50px 15px; background-color: #f9f9f9;">
+  <div style="max-width: 850px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 26px; font-weight: 700; color: #0a1a3a; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.8px;">
+      Nearby Places
+    </h2>
 
-  <div class="overlay"></div>
+    <p style="font-size: 15px; color: #444; margin-bottom: 25px; line-height: 1.6;">
+      Plot 2, after Kabusa Gardens, Cadastral Zone D14, Sheretti District, F.C.T.
+      <br>
+      <strong style="color: #0a1a3a;">(Nearby Landmark)</strong>
+    </p>
 
-  <div class="banner-content">
-    <h1 class="fade-in">Welcome to Top-Tier Realty</h1>
-    <p class="fade-in delay">We offer upscale real estate services</p>
+    <div style="text-align: left; display: inline-block; border: 2px solid #0a1a3a; padding: 20px 25px; border-radius: 10px; background-color: #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 14.5px; color: #444; line-height: 1.9;">
+        <li><i class="fa fa-map-marker-alt" style="color:#0a1a3a; margin-right:8px;"></i><strong>African Medical Centre of Excellence, Apo</strong> — 6 mins drive</li>
+        <li><i class="fa fa-map-marker-alt" style="color:#0a1a3a; margin-right:8px;"></i><strong>Kabusa Gardens</strong> — 6 mins drive</li>
+        <li><i class="fa fa-map-marker-alt" style="color:#0a1a3a; margin-right:8px;"></i><strong>Apo Mechanic Village</strong> — 8 mins drive</li>
+      </ul>
+    </div>
   </div>
-
-<!-- Curved white shape under the video -->
-<div class="curve-bottom">
-  <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
-    <!-- One smooth wave (single wavelength) -->
-    <path fill="#ffffff" d="M0,60 C360,0 1080,120 1440,60 L1440,120 L0,120 Z"></path>
-  </svg>
-</div>
-</div>
-
-<!-- ***** video bg end***** -->
+</section>
 
 
+  <!-- PROPERTIES -->
+  <section class="prototype-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/terracehighland1.jpg" alt="">
+            <div class="property-info">
+              <h6>150 SQM</h6>
+              <h4>3 bedroom terrace</h4>
+              <p>Lunara 150SQM is Ideal for a 3-bedroom terrace duplex, Lunara (150sqm land, Current Market Value: ₦5,850,000) 
+                is designed to maximize space efficiency with compromising comfort. </p>
 
-<!-- Our Story Banner -->
-<section class="our-story" style="background-color: #10344d; padding: 20px 10px;">
-  <div class="container" style="
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1200px;
-      margin: auto;
-  ">
-    
-    <!-- Image Side -->
-    <div class="story-image-side" style="
-        flex: 1 1 400px;
-        display: flex;
-        justify-content: center;
-    ">
-      <div style="
-          background: #dedcda;
-          border-radius: 15px;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-          padding: 10px;
-          max-width: 420px;
-      ">
-        <img src="assets/images/ourstorypics1.jpg" alt="Our Story" style="
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            object-fit: cover;
-        ">
-      </div>
-    </div>
 
-   <a href="https://wa.me/2349160008309?text=Hello%20Top-Tier%20Team" target="_blank" class="flow-btn">
-  <i class="fa fa-car"></i> Book a free site visit
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20150SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
 </a>
+<br><hr>
+<a href="assets/docs/highland150floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
 
 
-    <!-- Text Side -->
-    <div class="story-text-side" style="
-        flex: 1 1 500px;
-        background: #dedcda;
-        padding: 30px 35px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    ">
-      <div class="story-text" style="text-align: justify; color: #10344d;">
-        <h2 style="color: #10344d; font-weight: 700; margin-bottom: 11px;">Our Story</h2>
-        <p style="font-size: 10px;">
-         Top-Tier Realty was born from a powerful belief: real estate should be a trusted
-          and stress-free experience not just a transaction.
-          <br>
-​In an industry often clouded by uncertainty, we set out to 
-create a brand that truly puts people first.
-<br>
- Our mission is simple:
- to redefine your real estate journey through personalized service, smart solutions,
-  and unwavering integrity.<br>
-​For us, it's about more than property; it’s about helping you build the life you envision. 
-When you work with us, you gain a dedicated team committed to making your milestone smooth,
- rewarding, and successful.
-        </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/semidetachedhighland.png" alt="">
+            <div class="property-info">
+              <h6>250 SQM</h6>
+              <h4>4 bedroom semi-detached duplex</h4>         
+            <p>Perfect for a 4-bedroom semi-detached duplex, offering a balance of space and 
+              luxury. Current Market Value: ₦9,750,000.</p>
+
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20250SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/highland250floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/fullydetachedhighland.jpg" alt="">
+            <div class="property-info">
+              <h6>350 SQM</h6>
+              <h4>4 Bedroom fully detached duplex</h4>
+              <p>For those desiring more privacy, Sylvara (350sqm, Current Market Value: ₦13,650,000)
+                 provides ample space to build a 4-bedroom fully detached duplex.</p>
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20350SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/highland350floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->            </div>
+          </div>
+        </div>
+
+ <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/fullydetachedbqhighland.jpg" alt="">
+            <div class="property-info">
+              <h6>500 SQM</h6>
+              <h4>4 bedroom fully-detached</h4>
+              <p>Elysian supports the construction of a grand 5-bedroom fully-detached duplex, 
+                ideal for larger families. Current Market Value: ₦19,500,000 </p>
 
 
-        <br>
-        <hr>
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20500SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/highland500floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/6unithighland.jpg" alt="">
+            <div class="property-info">
+              <h6>750 SQM</h6>
+              <h4>6 Unit, 3 bedroom Apartment</h4>
+              <p>Lunara 150SQM is Ideal for a 3-bedroom terrace duplex, Lunara (150sqm land, Current Market Value: ₦5,850,000) 
+                is designed to maximize space efficiency with compromising comfort. </p>
+
+
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20750SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/highland750floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
+
+
+            </div>
+          </div>
+        </div>
        
-      <h2 style="color: #10344d; font-weight: 700; margin-bottom: 15px;">Our promise</h2>
- <p style="font-size: 10px;">
-To deliver upscale value and service through every experience, empowering 
-our clients with confidence and peace of mind in every property decision.
-        </p>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Mission, Vision, Core Values Section -->
-<section class="mvc-section">
-  <div class="mvc-container">
-    <div class="mvc-block fade-up">
-      <h3>Our Mission</h3>
-      <ul>
-        <li>We are committed to delivering a superior real estate experience,</li>
-        <li>through personalized service,</li>
-        <li>smart solutions, and careful attention to every detail</li>
-         <li>making property ownership and investment smooth,</li>
-          <li>rewarding, and stress-free for our clients.</li>
-      </ul>
-    </div>
-    <div class="mvc-block fade-up delay-1">
-      <h3>Our Vision</h3>
-      <ul>
-        <li>To be the most respected and prefferred name in premium real estate, known for setting the bar in service</li>
-        <li>known for setting the bar in service, trust, and refined property experiences in every community we serve</li>
-      </ul>
-    </div>
-    <div class="mvc-block fade-up delay-2">
-      <h3>Our Core Values</h3>
-      <ul>
-        <li>Excellence</li>
-        <li>Integrity</li>
-        <li>Client-focused</li>
-        <li>Innovation & Sustainability</li>
-        <li>Confidentiality</li>
-        <li>Attention to Detail</li>
-        <li>Partnership & Relationships</li>
-      </ul>
-    </div>
-  </div>
+  <section class="our-layout-section" style="text-align: center; padding: 60px 20px; background-color: #f9f9f9;">
+  <h2 style="font-size: 32px; font-weight: 700; color: #0a1a3a; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">
+    Our Layout
+  </h2>
+
+  <img src="assets/images/toptierhighlandlayout.jpg" alt="Our Layout" 
+       style="width: 90%; max-width: 900px; border: 8px solid #0a1a3a; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
 </section>
 
 
-<!-- Our Story Banner, vision mission end -->
-
-
-  <div class="main-banner">
-  <div class="owl-carousel owl-banner">
-    <div class="item item-1">
-      <div class="header-text overlay">
-        <span class="category">Prime Location <em>Karsana!</em></span>
-        <h2><br>Green Haven Estate Karsana</h2>
-        <a href="#" class="find-out-more">Find out more</a>
-      </div>
-    </div>
-    <div class="item item-2">
-      <div class="header-text overlay">
-       <span class="category">Prime Location <em>Kabusa!</em></span>
-        <h2><br>Top-tier Enclave, Highland City</h2>
-        <a href="#" class="find-out-more">Find out more</a>
-      </div>
-    </div>
-    <div class="item item-3">
-      <div class="header-text overlay">
-       <span class="category">Golf Resort <em>Airport Road!</em></span>
-        <h2><br>Hutu Polo Golf Resort</h2>
-        <a href="#" class="find-out-more">Find out more</a>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-  $(document).ready(function(){
-    $(".owl-banner").owlCarousel({
-      items: 1,
-      loop: true,
-      autoplay: true,
-      autoplayTimeout: 3000, // 3 seconds
-      autoplayHoverPause: false,
-      nav: false,
-      dots: true
-    });
-  });
-</script>
-
-  <div class="featured section">
+  <!-- AMENITIES -->
+  <section class="amenities-section">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="left-image">
-            <img src="assets/images/featured.jpg" alt="">
-            <a href="property-details.html"><img src="assets/images/featured-icon.png" alt="" style="max-width: 60px; padding: 0px;"></a>
-          </div>
-        </div>
-        <div class="col-lg-8">
-          <div class="section-heading">
-            <!-- <h6>| Featured</h6> -->
-            <h3>Frequently asked Question</h3>
-          </div>
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  How do I get started with buying a property from Toptier Realty?
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-              Simply contact us via our website or contact us via whatsapp, phone or email, and we will assist you.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  What is Top-tier Realty's commitment to customer satisfaction?
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                We offer free consultations, property tours, flexible payment plans, and after-sales support to ensure customer satisfaction.                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Are you the core developers in all your property locations?
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-We develop some properties ourselves, we also partner with other trusted developers to connect you with the best property options.                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="col-lg-3">
-          <div class="info-table">
-            <ul>
-              <li>
-                <img src="assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
-                <h4>step 1<br><span>Schedule a Site Visit</span></h4>
-              </li>
-              <li>
-                <img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;">
-                <h4>Step 2<br><span>Confirm Document Authenticity</span></h4>
-              </li>
-              <li>
-                <img src="assets/images/info-icon-03.png" alt="" style="max-width: 52px;">
-                <h4>Step 3<br><span>Payment Process</span></h4>
-              </li>
-              <li>
-                <img src="assets/images/info-icon-04.png" alt="" style="max-width: 52px;">
-                <h4>Step 4<br><span>Alocation Letter</span></h4>
-              </li>
-            </ul>
-          </div>
-        </div> -->
+      <h3>Estate Amenities</h3>
+      <div class="row g-4 text-center">
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-bolt"></i><h5>Electricity</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-water"></i><h5>Water Supply</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-shield-halved"></i><h5>Security</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-tree"></i><h5>Green Area</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-car"></i><h5>Parking</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-wifi"></i><h5>Internet</h5></div></div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- <div class="video section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 offset-lg-4">
-          <div class="section-heading text-center">
-            <h6>| Video View</h6>
-            <h2>Get Closer View & Different Feeling</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="video-content">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <div class="video-frame">
-            <img src="assets/images/video-frame.jpg" alt="">
-            <a href="https://youtube.com" target="_blank"><i class="fa fa-play"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="fun-facts">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="wrapper">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="34" data-speed="1000"></h2>
-                   <p class="count-text ">Buildings<br>Finished Now</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="12" data-speed="1000"></h2>
-                  <p class="count-text ">Years<br>Experience</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="counter">
-                  <h2 class="timer count-title count-number" data-to="24" data-speed="1000"></h2>
-                  <p class="count-text ">Awwards<br>Won 2023</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- happy clients and others section -->
-<section class="stats-section">
-  <div class="stat-box">
-    <div class="stat-icon"><i class="fas fa-smile"></i></div>
-    <div class="stat-number" data-target="50">0</div>
-    <div class="stat-label">Happy Clients</div>
-  </div>
-
-  <div class="stat-box">
-    <div class="stat-icon"><i class="fas fa-hand-holding-usd"></i></div>
-    <div class="stat-number" data-target="1000">0</div>
-    <div class="stat-label">Realty Transactions (1B+)</div>
-  </div>
-
-  <div class="stat-box">
-    <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
-    <div class="stat-number" data-target="5">0</div>
-    <div class="stat-label">Locations</div>
-  </div>
-
-  <div class="stat-box">
-    <div class="stat-icon"><i class="fas fa-handshake"></i></div>
-    <div class="stat-number" data-target="3">0</div>
-    <div class="stat-label">Realty Partners</div>
-  </div>
-</section>
-
-
-<script>
-  const counters = document.querySelectorAll('.stat-number');
-  let hasAnimated = false;
-
-  function animateNumbers() {
-    if (hasAnimated) return;
-    if (window.scrollY + window.innerHeight >= document.querySelector('.stats-section').offsetTop - 100) {
-      counters.forEach(counter => {
-        const updateCount = () => {
-          const target = +counter.getAttribute('data-target');
-          const count = +counter.innerText;
-          const increment = target / 100;
-
-          if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 20);
-          } else {
-            counter.innerText = target + '+';
-          }
-        };
-        updateCount();
-      });
-      hasAnimated = true;
-    }
-  }
-
-  window.addEventListener('scroll', animateNumbers);
-</script>
-
-
-<!-- happy clients and others all code end -->
-
-
-
-
-
-
- 
-
-<div class="section best-deal" style="background-color: #f8f9fc;">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="section-heading">
-          <h6 style="color: #cfa93f;">More About Our Properties</h6>
-          <h2 style="color: #001f3f;">In Prime Locations</h2>
-        </div>
-      </div>
-
-      <div class="col-lg-12">
-        <div class="tabs-content">
-          <div class="row">
-            <!-- Tabs -->
-            <div class="nav-wrapper">
-              <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="appartment-tab" data-bs-toggle="tab" data-bs-target="#appartment" type="button" role="tab">Karsana</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa" type="button" role="tab">Kabusa</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="penthouse-tab" data-bs-toggle="tab" data-bs-target="#penthouse" type="button" role="tab">Airport Road</button>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Tab Content -->
-            <div class="tab-content" id="myTabContent">
-
-              <!-- Apartment -->
-              <div class="tab-pane fade show active" id="appartment" role="tabpanel">
-                <div class="row align-items-center">
-                  <div class="col-lg-3">
-                    <div class="info-table">
-                      <h2>Greenhaven Estate Karsana</h2>
-                      <hr>
-                      <ul>
-                        <li>Estate Size <span style="color: #f8f9fc;">15 Hectares</span></li>
-                        <li>Document Type <span style="color: #f8f9fc;">R of O</span></li>
-                        <li>Payment Plan <span style="color: #f8f9fc;">Flexible (3-6 months)</span></li>
-                      </ul>
-                      <div class="info-buttons">
-                        <a href="#" class="btn-info gold"><i class="fa fa-download"></i> Download Layout</a>
-                        <!-- <a href="#" class="btn-info navy"><i class="fa fa-search"></i> Check Availability</a> -->
-                        <a href="#" class="btn-info gold"><i class="fa fa-lock"></i> Secure Your Spot</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-6">
-                    <img src="assets/images/high7.jpg" alt="Apartment" class="img-fluid rounded shadow-sm">
-                  </div>
-
-                  <div class="col-lg-3">
-                    <h4 style="color: #001f3f;">Extra Info About Property</h4>
-                    <p style="color: #000;">Experience luxury living at its finest in our modern apartments with serene surroundings and top-tier amenities. Perfect for investors and families seeking elegance and comfort in one place.</p>
-                    <div class="icon-button">
-                      <a href="property-details.html" class="visit-btn"><i class="fa fa-car"></i> Schedule a Visit</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Villa -->
-              <div class="tab-pane fade" id="villa" role="tabpanel">
-                <div class="row align-items-center">
-                  <div class="col-lg-3">
-                    
-                    <div class="info-table">
-                      <h2>Highland Enclave Kabusa</h2>
-                      <hr>
-                      <ul>
-                        <li>Estate Size <span style="color: #f8f9fc;">250 m²</span></li>
-                        <li>Document Type <span style="color: #f8f9fc;">Governor’s Consent</span></li>
-                        <li>Payment Plan <span style="color: #f8f9fc;">Outright or Installment</span></li>
-                      </ul>
-                      <div class="info-buttons">
-                        <a href="#" class="btn-info gold"><i class="fa fa-download"></i> Download Layout</a>
-                        <a href="#" class="btn-info navy"><i class="fa fa-search"></i> Check Availability</a>
-                        <a href="#" class="btn-info gold"><i class="fa fa-lock"></i> Secure Your Spot</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-6">
-                    <img src="assets/images/high10.jpg" alt="Villa" class="img-fluid rounded shadow-sm">
-                  </div>
-
-                  <div class="col-lg-3">
-                    <h4 style="color: #001f3f;">Detail Info About Villa</h4>
-                    <p style="color: #000;">Our villas combine modern architecture with classic charm, offering spacious rooms, lush greenery, and premium finishes to create the perfect dream home experience.</p>
-                    <div class="icon-button">
-                      <a href="property-details.html" class="visit-btn"><i class="fa fa-car"></i> Schedule a Visit</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Penthouse -->
-              <div class="tab-pane fade" id="penthouse" role="tabpanel">
-                <div class="row align-items-center">
-                  <div class="col-lg-3">
-                    <div class="info-table">
-                      <h2>Hutu Polo Golf Resort, Airport Road</h2>
-                      <hr>
-                      <ul>
-                        <li>Estate Size <span style="color: #f8f9fc;">320 m²</span></li>
-                        <li>Document Type <span style="color: #f8f9fc;">R of O</span></li>
-                        <li>Payment Plan <span style="color: #f8f9fc;">12–18 months plan</span></li>
-                      </ul>
-                      <div class="info-buttons">
-                        <a href="#" class="btn-info gold"><i class="fa fa-download"></i> Download Layout</a>
-                        <a href="#" class="btn-info navy"><i class="fa fa-search"></i> Check Availability</a>
-                        <a href="#" class="btn-info gold"><i class="fa fa-lock"></i> Secure Your Spot</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-6">
-                    <img src="assets/images/hutupolo.jpg" alt="Penthouse" class="img-fluid rounded shadow-sm">
-                  </div>
-
-                  <div class="col-lg-3">
-                    <h4 style="color: #001f3f;">Extra Info About Penthouse</h4>
-                    <p style="color: #000;">Enjoy breathtaking views and unmatched comfort in our penthouses, crafted with sophistication and attention to detail for those who appreciate exclusivity.</p>
-                    <div class="icon-button">
-                      <a href="property-details.html" class="visit-btn"><i class="fa fa-car"></i> Schedule a Visit</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End tab content -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- <div class="properties section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 offset-lg-4">
-          <div class="section-heading text-center">
-            <h6>| Properties</h6>
-            <h2>We Provide The Best Property You Like</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-01.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$2.264.000</h6>
-            <h4><a href="property-details.html">18 New Street Miami, OR 97219</a></h4>
-            <ul>
-              <li>Bedrooms: <span>8</span></li>
-              <li>Bathrooms: <span>8</span></li>
-              <li>Area: <span>545m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>6 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.180.000</h6>
-            <h4><a href="property-details.html">54 Mid Street Florida, OR 27001</a></h4>
-            <ul>
-              <li>Bedrooms: <span>6</span></li>
-              <li>Bathrooms: <span>5</span></li>
-              <li>Area: <span>450m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>8 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.460.000</h6>
-            <h4><a href="property-details.html">26 Old Street Miami, OR 38540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>5</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>225m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-04.jpg" alt=""></a>
-            <span class="category">Apartment</span>
-            <h6>$584.500</h6>
-            <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>3</span></li>
-              <li>Area: <span>125m2</span></li>
-              <li>Floor: <span>25th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-05.jpg" alt=""></a>
-            <span class="category">Penthouse</span>
-            <h6>$925.600</h6>
-            <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>180m2</span></li>
-              <li>Floor: <span>38th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-06.jpg" alt=""></a>
-            <span class="category">Modern Condo</span>
-            <h6>$450.000</h6>
-            <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>3</span></li>
-              <li>Bathrooms: <span>2</span></li>
-              <li>Area: <span>165m2</span></li>
-              <li>Floor: <span>26th</span></li>
-              <li>Parking: <span>3 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- ===== Our Reliable Partners Section ===== -->
-<section class="partners-section">
-  <div class="container">
-    <h2 class="partners-heading">Our Reliable Partners</h2>
-    <div class="partners-logos">
-      <div class="partner">
-        <img src="assets/images/edinandpeoplelogo.png" alt="Partner 1">
-      </div>
-      <div class="partner">
-        <img src="assets/images/firstfruitlogo.png" alt="Partner 2">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <div class="contact section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 offset-lg-4">
-          <div class="section-heading text-center">
-            
-            <h2>Get In Touch</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="contact-content">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div id="map">
-<div class="map-wrapper">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.622977034008!2d7.470263573611755!3d9.006795989339013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0d1115052259%3A0x9b4d501a45b78cf6!2sAbiding%20grace%20plaza%2C(Zoza&#39;s%20kiddies%20and%20teens%20Salon)!5e0!3m2!1sen!2sng!4v1759824098132!5m2!1sen!2sng"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Footer -->
-<!-- Footer -->
+  <!-- FOOTER -->
+ <!-- Footer -->
   <footer style="background-color: #001f3f; color: #ffffff; font-size: 14px; padding: 40px 20px 20px; text-align: center;">
     <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px; text-align: left;">
 
       <!-- Logo and Description -->
       <div style="flex: 1; min-width: 300px;">
-        <h3 style="font-size: 18px; margin-bottom: 10px; color: #c8aa62;">Top-Tier Realty</h3>
+        <h3 style="font-size: 18px; margin-bottom: 10px; color: #c8aa62;">Top-tier Realty</h3>
         <p style="margin: 0; color: #d0d8e0; line-height: 1.6;">
-          At Top-Tier realty, we make property investment and ownership a smooth and rewarding experience for our clients.
+          At Top-tier realty, we make property investment and ownership a smooth and rewarding experience for our clients.
         </p>
       </div>
 
@@ -1043,51 +591,24 @@ We develop some properties ourselves, we also partner with other trusted develop
     </div>
   </footer>
 
-
-<style>
-  .map-wrapper {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 2px solid #C8AA62; /* gold border to match your theme */
-}
-
-.map-wrapper iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-}
-
-/* For tablets and small laptops */
-@media (max-width: 768px) {
-  .map-wrapper iframe {
-    height: 300px;
-  }
-}
-
-/* For mobile screens */
-@media (max-width: 480px) {
-  .map-wrapper iframe {
-    height: 220px;
-  }
-}
-
-</style>
-  
-
-
-  
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
+  <!-- SCRIPTS -->
   <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  </body>
+  <script>
+    // Preloader fade-out
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.style.opacity = "0";
+      setTimeout(() => (preloader.style.display = "none"), 600);
+    });
+
+    // Menu toggle
+    const menuTrigger = document.querySelector(".menu-trigger");
+    const nav = document.querySelector(".main-nav .nav");
+    menuTrigger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+</body>
 </html>
