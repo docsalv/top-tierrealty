@@ -30,53 +30,82 @@ https://templatemo.com/tm-591-villa-agency
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+ <!-- ***** Image Preloader Start ***** -->
+<div id="js-preloader" class="image-preloader">
+  <div class="preloader-content">
+    <img src="assets/images/toptierpreloder.png" alt="Loading..." class="preloader-logo">
   </div>
-  <!-- ***** Preloader End ***** -->
+</div>
 
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("js-preloader");
+    preloader.classList.add("fade-out");
+    setTimeout(() => { preloader.style.display = "none"; }, 600);
+  });
+</script>
 
-<div class="sub-header" style="background-color: #001a2b; width: 100%; padding: 10px 0;">
+<!-- ***** Image Preloader End ***** -->
+
+<div class="sub-header">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-8">
-        <ul class="info" style="margin: 0; padding: 0; list-style: none;">
-          <li><i class="fa fa-envelope"></i> officialtoptierrealty@gmail.com</li>
-          <li><i class="fa fa-map"></i> Abiding Grace Plaza, Apo; Gudu. Abuja</li>
+        <ul class="info">
+          <li>
+            <i class="fa fa-envelope"></i>
+            officialtoptierrealty@gmail.com
+          </li>
+          <li>
+            <i class="fa fa-map-marker-alt"></i>
+            Abiding Grace Plaza, Apo; Gudu. Abuja
+          </li>
         </ul>
       </div>
+
       <div class="col-lg-4 col-md-4">
-        <ul class="social-links" style="margin: 0; padding: 0; list-style: none; display: flex; gap: 10px; justify-content: flex-end;">
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <ul class="social-links">
+        <li>
+    <a href="https://www.facebook.com/profile.php?id=61576613353029&mibextid=ZbWKwL" target="_blank" title="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://x.com/top_tierrealty?t=NcOIc6vsba6OuGsv1dlH_w&s=09" target="_blank" title="X (Twitter)">
+      <i class="fab fa-x-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.tiktok.com/@officialtoptierrealty?_t=ZS-90Otipaq9k8&_r=1" target="_blank" title="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/officialtoptierrealty?igsh=c2o1aTJvZGpiMDE4" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
 
-  
 
- <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
+
+
+  <!-- ***** Header Area Start ***** -->
+ <header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <img src="assets/images/toptierlogo.png" alt="Toptier Logo" style="height: 140px; width: 140px; margin-top: -30px;">
+                        <img src="assets/images/ttrlogo.png" alt="Toptier Logo" style="height: 140px; width: 140px; margin-top: -30px;">
                     </a>
+                 
+
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
@@ -85,11 +114,11 @@ https://templatemo.com/tm-591-villa-agency
                         <li><a href="third-party.html">Our Third Party Properties</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
-                        
-                        <li>
-                            <a href="#">
-                        <i class="fa fa-car" style="color: #C8AA62;"></i> Book a free site visit
-                            </a>
+                           <li>
+                            <a href="https://wa.me/2349160008309?text=Hello%20Top-Tier%20Team" target="_blank">
+  <i class="fa fa-car"  style="color: #C8AA62;"></i> Book a free site visit
+</a>
+
                         </li>
                     </ul>   
                     <a class='menu-trigger'>
@@ -101,6 +130,7 @@ https://templatemo.com/tm-591-villa-agency
         </div>
     </div>
 </header>
+  <!-- ***** Header Area End ***** -->
 
   <!-- ***** Header Area End ***** -->
 
@@ -186,54 +216,58 @@ https://templatemo.com/tm-591-villa-agency
   </div>
 
 <!-- Footer -->
-<footer style="background-color: #001f3f; color: #ffffff; font-size: 14px; padding: 40px 20px 20px; text-align: center;">
-  <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px; text-align: left;">
+ <!-- Footer -->
+  <footer style="background-color: #001f3f; color: #ffffff; font-size: 14px; padding: 40px 20px 20px; text-align: center;">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px; text-align: left;">
 
-    <!-- Logo and Description -->
-    <div style="flex: 1; min-width: 300px;">
-      <h3 style="font-size: 18px; margin-bottom: 10px; color: #c8aa62;">Top-tier Realty</h3>
-      <p style="margin: 0; color: #d0d8e0; line-height: 1.6;">
-       At Top-tier realty, we make property investment and ownership a smooth and rewarding experience for our clients
-      </p>
-    </div>
+      <!-- Logo and Description -->
+      <div style="flex: 1; min-width: 300px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px; color: #c8aa62;">Top-Tier Realty</h3>
+        <p style="margin: 0; color: #d0d8e0; line-height: 1.6;">
+          At Top-Tier realty, we make property investment and ownership a smooth and rewarding experience for our clients.
+        </p>
+      </div>
 
-    <!-- Contact Details -->
-    <div style="flex: 1; min-width: 300px;">
-      <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Address</h4>
-      <p style="margin: 0 0 8px; color: #d0d8e0;">Abiding Grace Plaza, Apo, Gudu; Abuja.</p>
+      <!-- Contact Details -->
+      <div style="flex: 1; min-width: 300px;">
+        <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Address</h4>
+        <p style="margin: 0 0 8px; color: #d0d8e0;">Abiding Grace Plaza, Apo, Gudu; Abuja.</p>
 
-      <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Email</h4>
-      <p style="margin: 0; color: #d0d8e0;">officialtoptierrealty@gmail.com</p>
+        <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Email</h4>
+        <p style="margin: 0; color: #d0d8e0;">officialtoptierrealty@gmail.com</p>
 
-      <h4 style="font-size: 15px; margin-bottom: 4px; color: #c8aa62;">Phone</h4>
-      <p style="margin: 0; color: #d0d8e0;">+234-916-000-8309</p>
-      <p style="margin: 0; color: #d0d8e0;">+234-907-726-6555</p>
-      <p style="margin: 0; color: #d0d8e0;">+234-814-597-2225</p>
-      <p style="margin: 0; color: #d0d8e0;">+234-704-358-1877</p>
-    </div>
+        <h4 style="font-size: 15px; margin-bottom: 4px; color: #c8aa62;">Phone</h4>
+        <p style="margin: 0; color: #d0d8e0;">+234-916-000-8309</p>
+        <p style="margin: 0; color: #d0d8e0;">+234-907-726-6555</p>
+        <p style="margin: 0; color: #d0d8e0;">+234-814-597-2225</p>
+        <p style="margin: 0; color: #d0d8e0;">+234-704-358-1877</p>
+      </div>
 
-    <!-- Social Links -->
-    <div style="flex: 1; min-width: 250px;">
-      <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Follow Us</h4>
-      <div style="display: flex; gap: 15px; margin-top: 5px;">
-        <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-youtube"></i></a>
+      <!-- Social Links -->
+      <div style="flex: 1; min-width: 250px;">
+        <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Follow Us</h4>
+        <div style="display: flex; gap: 15px; margin-top: 5px;">
+          <a href="https://www.facebook.com/profile.php?id=61576613353029&mibextid=ZbWKwL" target="_blank" title="Facebook"style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a  href="https://www.instagram.com/officialtoptierrealty?igsh=c2o1aTJvZGpiMDE4" target="_blank" title="Instagram" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@officialtoptierrealty?_t=ZS-90Otipaq9k8&_r=1" target="_blank" title="TikTok"style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-tiktok"></i></a>
+<a href="https://x.com/top_tierrealty?t=NcOIc6vsba6OuGsv1dlH_w&s=09"
+   target="_blank"
+   style="color: #ffffff; font-size: 18px;">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="18" height="18" fill="currentColor">
+     <path d="M714.2 519.9 1160.9 0h-105.2L667.3 442.2 398.6 0H0l468.1 728.2L0 1226.9h105.2l409.1-466.4 287.8 466.4h398.6L714.2 519.9zM575.8 689.5l-47.4-74.2L143.3 79.8h181.2l305.4 478.7 47.4 74.2 403.9 634.4H899.9L575.8 689.5z"/>
+   </svg>
+</a>
+          <!-- <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-youtube"></i></a> -->
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Divider Line -->
-  <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 25px auto 10px; width: 90%;">
-
-  <!-- Copyright Section -->
-  <div style="color: #d0d8e0; font-size: 13px; line-height: 1.4;">
-    <p style="margin: 0;">&copy; 2025 Top-Tier Realty. All rights reserved.</p>
-    <p style="margin: 2px 0 0;">Designed by <strong>Top-tier Realty Media</strong></p>
-  </div>
-</footer>
+    <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 25px auto 10px; width: 90%;">
+    <div style="color: #d0d8e0; font-size: 13px; line-height: 1.4;">
+      <p style="margin: 0;">&copy; 2025 Top-Tier Realty. All rights reserved.</p>
+      <p style="margin: 2px 0 0;">Designed by <strong>TTR Media</strong></p>
+    </div>
+  </footer>
 
 
 <!-- Font Awesome CDN -->
