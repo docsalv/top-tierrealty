@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-509SPFF5E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-509SPFF5E1');
+</script>
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Top-Tier Realty - Green Haven City</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #10344D;
+    }
+
+ /* ===== IMAGE PRELOADER ===== */
+.image-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.image-preloader .preloader-content {
+  text-align: center;
+}
+
+.image-preloader .preloader-logo {
+  width: 150px;
+  height: auto;
+  animation: fadePulse 2s infinite ease-in-out;
+}
+
+/* Simple pulse animation for logo */
+@keyframes fadePulse {
+  0% { opacity: 0.6; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.6; transform: scale(0.95); }
+}
+
+/* Hide preloader smoothly when done */
+.image-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+    /* -----------------------------
+       SUB-HEADER
+    ------------------------------ */
+    .sub-header {
+      background: #10344D;
+      color: white;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .sub-header .info,
+    .sub-header .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .sub-header .info li {
+      margin-right: 20px;
+    }
+
+    .sub-header .info i {
+      color: #C8AA62;
+      margin-right: 8px;
+    }
+
+    .social-links li {
+      margin-left: 10px;
+    }
+
+    .social-links a {
+      color: white;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #C8AA62;
+    }
+
+    /* -----------------------------
+       HEADER AREA
+    ------------------------------ */
+    .header-area {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .main-nav .nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav .nav li {
+      margin: 0 15px;
+    }
+
+    .main-nav .nav a {
+      text-decoration: none;
+      color: #10344D;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .main-nav .nav a.active,
+    .main-nav .nav a:hover {
+      color: #C8AA62;
+    }
+
+    .menu-trigger {
+      display: none;
+      cursor: pointer;
+      background: #10344D;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* MOBILE MENU */
+    @media (max-width: 992px) {
+      .main-nav .nav {
+        display: none;
+        flex-direction: column;
+        background: #10344D;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+      }
+
+      .main-nav .nav.active {
+        display: flex;
+      }
+
+      .main-nav .nav li {
+        margin: 15px 0;
+        text-align: center;
+      }
+
+      .main-nav .nav a {
+        color: white;
+        font-size: 16px;
+      }
+
+      .menu-trigger {
+        display: block;
+      }
+    }
+
+    /* -----------------------------
+       HERO / ESTATE HEADER
+    ------------------------------ */
+    .estate-header {
+      position: relative;
+      background: url("assets/images/estate-bg.jpg") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .estate-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(16, 52, 77, 0.8);
+      z-index: 0;
+    }
+
+    .estate-header h2,
+    .estate-header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .estate-header h2 {
+      color: #C8AA62;
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .estate-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #eee;
+    }
+
+    /* -----------------------------
+       PROPERTY SECTION
+    ------------------------------ */
+    .prototype-section {
+      padding: 60px 0;
+      background: white;
+    }
+
+    .property-card {
+      background: #10344D;
+      color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .property-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .property-info {
+      padding: 20px;
+    }
+
+    .property-info h4 {
+      color: #C8AA62;
+      margin-bottom: 10px;
+    }
+
+    .btn-secure {
+      display: inline-block;
+      background: #C8AA62;
+      color: #10344D;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-secure:hover {
+      background: #10344D;
+      color: #C8AA62;
+      border: 2px solid #C8AA62;
+    }
+
+    /* -----------------------------
+       AMENITIES SECTION
+    ------------------------------ */
+    .amenities-section {
+      background: #10344D;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .amenities-section h3 {
+      text-align: center;
+      color: #C8AA62;
+      margin-bottom: 40px;
+    }
+
+    .amenity-box {
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .amenity-box:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .amenity-box i {
+      color: #C8AA62;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    /* -----------------------------
+       FOOTER
+    ------------------------------ */
+    footer {
+      background: #0d2a3c;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #C8AA62;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ***** Image Preloader Start ***** -->
+<div id="js-preloader" class="image-preloader">
+  <div class="preloader-content">
+    <img src="assets/images/toptierpreloder.png" alt="Loading..." class="preloader-logo">
+  </div>
+</div>
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("js-preloader");
+    preloader.classList.add("fade-out");
+    setTimeout(() => { preloader.style.display = "none"; }, 600);
+  });
+</script>
+
+<!-- ***** Image Preloader End ***** -->
+  
+
+  <!-- HEADER -->
+  <header class="header-area">
+    <div class="container">
+      <nav class="main-nav">
+        <a href="index.html" class="logo">
+          <img src="assets/images/toptierlogo.png" alt="Toptier Logo" style="height: 120px;">
+        </a>
+
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html" class="active">Properties</a></li>
+          <li><a href="third-party.html">Third Party Properties</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#"><i class="fa fa-car" style="color:#C8AA62;"></i> Book Site Visit</a></li>
+        </ul>
+
+        <a class="menu-trigger"><span>Menu</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="estate-header">
+    <h2>GREEN HAVEN ESTATE</h2>
+    <p>KARSANA, ABUJA</p>
+  </section>
+  <section class="nearby-section" style="padding: 50px 15px; background-color: #f9f9f9;">
+  <div style="max-width: 850px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 26px; font-weight: 700; color: #0a1a3a; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.8px;">
+      Nearby Places
+    </h2>
+
+    <p style="font-size: 15px; color: #444; margin-bottom: 25px; line-height: 1.6;">
+Plot 33, opposite Nigerian Army Estate, Cadastral Zone D06, Karsana West, Abuja, F.C.T
+      <br>
+      <strong style="color: #0a1a3a;">(Nearby Landmark)</strong>
+    </p>
+
+    <div style="text-align: left; display: inline-block; border: 2px solid #0a1a3a; padding: 20px 25px; border-radius: 10px; background-color: #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,0.08);">
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 14.5px; color: #444; line-height: 1.9;">
+        <li><i class="fa fa-map-marker-alt" style="color:#0a1a3a; margin-right:8px;"></i><strong>Renewed Hope City, Karsana</strong> — 3 sec drive</li>
+        <li><i class="fa fa-map-marker-alt" style="color:#0a1a3a; margin-right:8px;"></i><strong>EFAB Queens Estate Karsana</strong> — 15 mins drive</li>
+        <li><i class="fa fa-map-marker-alt" style="color:#0a1a3a; margin-right:8px;"></i><strong>Police Estate, Karsana</strong> — 6 mins drive</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PROPERTIES -->
+  <section class="prototype-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/greenhaven150.png" alt="">
+            <div class="property-info">
+              <h6>150 SQM</h6>
+              <h4>3 bedroom terrace</h4>
+              <p>Ideal for a 3-bedroom terrace duplex, Aurora (150sqm, Current Market Value: ₦11,505,000) 
+                is designed to maximize space efficiency with compromising comfort </p>
+
+
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20150SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/greenhaven150floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/greenhaven250.png" alt="">
+            <div class="property-info">
+              <h6>250 SQM</h6>
+              <h4>4 bedroom semi-detached duplex</h4>         
+            <p>Perfect for a 4-bedroom semi-detached duplex, offering 
+              a balance of space and luxury. Current Market Value: ₦19,175,000.</p>
+
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20250SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/greenhaven150floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/greenhaven350.jpg" alt="">
+            <div class="property-info">
+              <h6>350 SQM</h6>
+              <h4>4 Bedroom fully detached duplex</h4>
+              <p>For those desiring more privacy, Eterna (350sqm, 
+                Current Market Value: ₦26,845,000) provides ample space to build a 4-bedroom fully detached duplex.</p>
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20350SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/greenhaven350floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->            </div>
+          </div>
+        </div>
+
+ <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/greenhaven500.jpg" alt="">
+            <div class="property-info">
+              <h6>500 SQM</h6>
+              <h4>4 bedroom fully-detached</h4>
+              <p>Serena supports the construction of a grand 5-bedroom 
+                fully-detached duplex and a maid's room, ideal for larger families. Current Market Value: ₦38,350,000 </p>
+
+
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20500SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/greenhaven500floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="property-card">
+            <img src="assets/images/greenhaven950.jpg" alt="">
+            <div class="property-info">
+              <h6>950 SQM</h6>
+              <h4>6 Unit, 3 bedroom Apartment</h4>
+              <p>Suitable for a 6-unit, 3-bedroom apartment complex, catering to extended families 
+                or investment purposes. Current Market Value: ₦72,865,000. </p>
+
+
+<!-- Secure Your Place  and floor plan Button -->
+<a href="https://wa.me/2349160008309?text=Hi%2C%20I%20want%20more%20details%20on%20the%20750SQM%20in%20Highland%20City%20Kabusa" 
+   class="btn-secure" 
+   target="_blank">
+   Secure Your Place
+</a>
+<br><hr>
+<a href="assets/docs/greenhaven950floorplan.pdf" class="btn-secure" style="background: #eee;" target="_blank">View floor plan</a>
+<!-- Secure Your Place Button -->
+
+
+            </div>
+          </div>
+        </div>
+       
+
+      </div>
+    </div>
+  </section>
+
+  <section class="our-layout-section" style="text-align: center; padding: 60px 20px; background-color: #f9f9f9;">
+  <h2 style="font-size: 32px; font-weight: 700; color: #0a1a3a; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">
+    Our Layout
+  </h2>
+
+  <img src="assets/images/GREEN HAVEN KARSANA LAYOUT.jpg" alt="Our Layout" 
+       style="width: 90%; max-width: 900px; border: 8px solid #0a1a3a; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+</section>
+
+
+  <!-- AMENITIES -->
+  <section class="amenities-section">
+    <div class="container">
+      <h3>Estate Amenities</h3>
+      <div class="row g-4 text-center">
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-bolt"></i><h5>Electricity</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-water"></i><h5>Water Supply</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-shield-halved"></i><h5>Security</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-tree"></i><h5>Green Area</h5></div></div>
+        <div class="col-md-2 col-6"><div class="amenity-box"><i class="fa-solid fa-car"></i><h5>Parking</h5></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+ <!-- Footer -->
+  <footer style="background-color: #001f3f; color: #ffffff; font-size: 14px; padding: 40px 20px 20px; text-align: center;">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px; text-align: left;">
+
+      <!-- Logo and Description -->
+      <div style="flex: 1; min-width: 300px;">
+        <h3 style="font-size: 18px; margin-bottom: 10px; color: #c8aa62;">Top-tier Realty</h3>
+        <p style="margin: 0; color: #d0d8e0; line-height: 1.6;">
+          At Top-tier realty, we make property investment and ownership a smooth and rewarding experience for our clients.
+        </p>
+      </div>
+
+      <!-- Contact Details -->
+      <div style="flex: 1; min-width: 300px;">
+        <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Address</h4>
+        <p style="margin: 0 0 8px; color: #d0d8e0;">Abiding Grace Plaza, Apo, Gudu; Abuja.</p>
+
+        <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Email</h4>
+        <p style="margin: 0; color: #d0d8e0;">officialtoptierrealty@gmail.com</p>
+
+        <h4 style="font-size: 15px; margin-bottom: 4px; color: #c8aa62;">Phone</h4>
+        <p style="margin: 0; color: #d0d8e0;">+234-916-000-8309</p>
+        <p style="margin: 0; color: #d0d8e0;">+234-907-726-6555</p>
+        <p style="margin: 0; color: #d0d8e0;">+234-814-597-2225</p>
+        <p style="margin: 0; color: #d0d8e0;">+234-704-358-1877</p>
+      </div>
+
+      <!-- Social Links -->
+      <div style="flex: 1; min-width: 250px;">
+        <h4 style="font-size: 15px; margin-bottom: 6px; color: #c8aa62;">Follow Us</h4>
+        <div style="display: flex; gap: 15px; margin-top: 5px;">
+          <a href="https://www.facebook.com/profile.php?id=61576613353029&mibextid=ZbWKwL" target="_blank" title="Facebook"style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-facebook-f"></i></a>
+          <a  href="https://www.instagram.com/officialtoptierrealty?igsh=c2o1aTJvZGpiMDE4" target="_blank" title="Instagram" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@officialtoptierrealty?_t=ZS-90Otipaq9k8&_r=1" target="_blank" title="TikTok"style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-tiktok"></i></a>
+<a href="https://x.com/top_tierrealty?t=NcOIc6vsba6OuGsv1dlH_w&s=09"
+   target="_blank"
+   style="color: #ffffff; font-size: 18px;">
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" width="18" height="18" fill="currentColor">
+     <path d="M714.2 519.9 1160.9 0h-105.2L667.3 442.2 398.6 0H0l468.1 728.2L0 1226.9h105.2l409.1-466.4 287.8 466.4h398.6L714.2 519.9zM575.8 689.5l-47.4-74.2L143.3 79.8h181.2l305.4 478.7 47.4 74.2 403.9 634.4H899.9L575.8 689.5z"/>
+   </svg>
+</a>
+          <!-- <a href="#" style="color: #ffffff; font-size: 18px;"><i class="fa-brands fa-youtube"></i></a> -->
+        </div>
+      </div>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 25px auto 10px; width: 90%;">
+    <div style="color: #d0d8e0; font-size: 13px; line-height: 1.4;">
+      <p style="margin: 0;">&copy; 2025 Top-Tier Realty. All rights reserved.</p>
+      <p style="margin: 2px 0 0;">Designed by <strong>TTR Media</strong></p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Preloader fade-out
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.style.opacity = "0";
+      setTimeout(() => (preloader.style.display = "none"), 600);
+    });
+
+    // Menu toggle
+    const menuTrigger = document.querySelector(".menu-trigger");
+    const nav = document.querySelector(".main-nav .nav");
+    menuTrigger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
